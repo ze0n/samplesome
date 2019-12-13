@@ -173,9 +173,4 @@ floatTadeGenerator.Field("Notional", Float().Kde(
 #----------------------------------------
 # Generate 1000 trades and export as csv
 #----------------------------------------
-ret = floatTadeGenerator.Generate(1000)
-import pandas as pd
-df = pd.DataFrame.from_dict(ret)
-print(df.to_string())
-df.to_csv("FLO.csv")
-
+ret = floatTadeGenerator.GenerateToCsv(1000, "FLO.csv")
