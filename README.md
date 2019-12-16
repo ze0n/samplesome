@@ -61,4 +61,6 @@ animal.Field("Age", Float().Kde([1.2, 2.3, 3.3, 3.2, .4, 5.6, 1.1, 1.0, 2.0, 2.1
 ```
 ### Data generation
 Generate 1000 animals and export as csv:
-animal.GenerateToCsv(1000, "FLO.csv")
+```python
+animal.GenerateToCsv(1000, "zoo.csv")
+```
