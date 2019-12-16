@@ -48,11 +48,11 @@ animal \
 Condition is a special type of derivative field, which allows defining a predicate and corresponding generator. We know that the weight of an animal depends on its type.
 ```python
 animal.Field("Weight", Float()
-						 .Condition(lambda fields: fields["Type"] == 'Bear', lambda f: f.Normal(mu=50, sigma=10, minf=10))
-						 .Condition(lambda fields: fields["Type"] == 'Kangoo', lambda f: f.Normal(mu=30, sigma=5, minf=5))
-						 .Condition(lambda fields: fields["Type"] in ['Pig', 'Cat'], lambda f: f.Normal(mu=5, sigma=1, minf=1))
-						 .Condition(lambda fields: fields["Type"] == 'Snake', lambda f: f.Exponential(scale=2, minf=1))
-						 .Condition(lambda fields: True, lambda f: f.Const(NAN)))
+  .Condition(lambda fields: fields["Type"] == 'Bear', lambda f: f.Normal(mu=50, sigma=10, minf=10))
+  .Condition(lambda fields: fields["Type"] == 'Kangoo', lambda f: f.Normal(mu=30, sigma=5, minf=5))
+  .Condition(lambda fields: fields["Type"] in ['Pig', 'Cat'], lambda f: f.Normal(mu=5, sigma=1, minf=1))
+  .Condition(lambda fields: fields["Type"] == 'Snake', lambda f: f.Exponential(scale=2, minf=1))
+  .Condition(lambda fields: True, lambda f: f.Const(NAN)))
 ```
 Take into account that min and max values may be limited to [minf:maxf].
 #### Probability distibution can be defined in form of KDE
