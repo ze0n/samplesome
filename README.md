@@ -1,6 +1,6 @@
 # SampleSome
 DSL-like data sampling library for Python 3.
-## Example - Zoo datase
+## Example - Zoo dataset
 Let's assume that we need to generate a dataset containing of animals in the zoo. Each animal has: Id, ZooName, Type, Name, DaysInZoo, Weight, Age, Popularity (number of guests per day).
 Samplesome library provides a fluent-style API to generate a table of data. THere are three steps:
 1. Create a model;
